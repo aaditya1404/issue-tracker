@@ -26,7 +26,7 @@ const Navbar = () => {
           <li key={index}>
             <Link
               href={`${link.to}`}
-              className={`${link.to === pathname ? "text-zinc-900" : "text-zinc-500"} hover:text-zinc-900 transition-colors`}
+              className={`${link.to === pathname ? "text-zinc-200" : "text-zinc-400"} hover:text-zinc-100 transition-colors`}
               >
               {link.name}
             </Link>
