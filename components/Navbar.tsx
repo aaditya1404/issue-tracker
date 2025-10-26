@@ -1,7 +1,12 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+
+    const pathname = usePathname();
+    console.log(pathname);
+
   const links = [
     {
       to: "/",
@@ -21,8 +26,8 @@ const Navbar = () => {
           <li key={index}>
             <Link
               href={`${link.to}`}
-              className="text-zinc-500 hover:text-zinc-900 transition-colors"
-            >
+              className={`${link.to === pathname ? "text-zinc-900" : "text-zinc-500"} hover:text-zinc-900 transition-colors`}
+              >
               {link.name}
             </Link>
           </li>
